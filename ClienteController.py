@@ -100,4 +100,4 @@ class ClienteController:
                     return self.__clientes[key]
             
         except:
-            return 'Nome não encontrado'
+            return 'Nome não encontrado' # is returnin None, fix it later
