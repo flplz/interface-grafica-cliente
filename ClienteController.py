@@ -102,4 +102,4 @@ class ClienteController:
         if temReturn:
             return cliente
         else:
-            return 'Nome não encontrado' # is returnin None, fix it later
+            return 'Nome não encontrado' 
