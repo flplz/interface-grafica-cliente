@@ -94,10 +94,12 @@ class ClienteController:
             return "Esse codigo não esta cadastrado a nenhum cliente"
 
     def busca_nome(self, nome):
-        try:
-            for key, val in self.__clientes.items():
-                if val.nome == nome:
-                    return self.__clientes[key]
-            
-        except:
+        temReturn = False
+        for key, val in self.__clientes.items():
+            if val.nome == nome:
+                temReturn = True
+                cliente = self.__clientes[key]
+        if temReturn:
+            return cliente
+        else:
             return 'Nome não encontrado' # is returnin None, fix it later
